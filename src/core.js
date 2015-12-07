@@ -1,6 +1,10 @@
 
 // set up main nv object
 var nv = {};
+// Node/CommonJS - require D3
+if (typeof(module) !== 'undefined' && typeof(exports) !== 'undefined' && typeof(d3) == 'undefined') {
+    d3 = require('d3');
+}
 
 // the major global objects under the nv namespace
 nv.dev = false; //set false when in production
